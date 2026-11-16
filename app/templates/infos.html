@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Infos pratiques{% endblock %}
+{% block top %}<h1 class="page-title">Infos pratiques</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <p class="note">Contenu repris tel quel de la base officielle ESTC / MDO (v3). Information absente : contact@estc.ma · 0522230494 / 0522231560 · www.estc.ma</p>
+  <div class="grid">
+    {% for s in sections %}
+    <article class="card {{ 'card-alert' if s.id=='absences' }}">
+      <h3 class="card-title">{{ s.title }}</h3>
+      <ul class="plain">{% for it in s['items'] %}<li>{{ it }}</li>{% endfor %}</ul>
+    </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

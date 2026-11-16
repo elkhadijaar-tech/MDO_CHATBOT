@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Tableau de bord{% endblock %}
+{% block top %}<h1 class="page-title">Tableau de bord</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <section class="hero">
+    <div>
+      <h2>Bienvenue sur MDO CHATBOT</h2>
+      <p>Votre assistant d'intégration et votre tuteur pour la 1re année MDO à l'ESTC : absences, démarches, modules, et cours d'économie, gestion, droit, comptabilité et informatique.</p>
+    </div>
+    <a class="btn btn-accent btn-lg" href="{{ url_for('chat_page') }}"><svg class="ic"><use href="#i-chat"/></svg>Poser une question</a>
+  </section>
+  <section class="cols">
+    <div>
+      <h3 class="sec-title">Accès rapide</h3>
+      <div class="grid g3">
+        <a class="card card-link" href="{{ url_for('chat_page') }}?q=Quelles%20sont%20les%20r%C3%A8gles%20d%27absence%20%3F"><svg class="ic ic-lg"><use href="#i-shield"/></svg><h4>Règles d'absence</h4><p>Seuil de 50 %, certificat médical, rattrapage.</p></a>
+        <a class="card card-link" href="{{ url_for('courses_page') }}"><svg class="ic ic-lg"><use href="#i-book"/></svg><h4>Cours</h4><p>19 modules : explications, formules, exemples.</p></a>
+        <a class="card card-link" href="{{ url_for('modules_page') }}"><svg class="ic ic-lg"><use href="#i-users"/></svg><h4>Modules &amp; professeurs</h4><p>Semestres S1 à S4.</p></a>
+        <a class="card card-link" href="{{ url_for('infos_page') }}"><svg class="ic ic-lg"><use href="#i-info"/></svg><h4>Infos pratiques</h4><p>Contacts, démarches, formations.</p></a>
+        {% if is_admin %}<a class="card card-link" href="{{ url_for('knowledge_page') }}"><svg class="ic ic-lg"><use href="#i-db"/></svg><h4>Bases de connaissances</h4><p>Importer et gérer des sources.</p></a>{% endif %}
+      </div>
+      <h3 class="sec-title">Conversations récentes</h3>
+      <div id="dash-convs" class="card list"></div>
+    </div>
+    <div>
+      <h3 class="sec-title">Bases de connaissances actives</h3>
+      <div id="dash-kbs" class="card list"></div>
+      <h3 class="sec-title">État du système</h3>
+      <div id="dash-status" class="card list"></div>
+    </div>
+  </section>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='dashboard.js') }}"></script>{% endblock %}

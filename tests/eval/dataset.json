@@ -1,0 +1,425 @@
+{
+ "description": "Jeu de test MDO CHATBOT : vérifications d'infrastructure (recherche, règles, calculs, contexte). Pas de notation de la qualité rédactionnelle d'un modèle.",
+ "cases": [
+  {
+   "id": 1,
+   "category": "onboarding",
+   "question": "Où déposer mon certificat médical ?",
+   "expect_all": [
+    "Mdarbi",
+    "72"
+   ]
+  },
+  {
+   "id": 2,
+   "category": "onboarding",
+   "question": "Que se passe-t-il si je dépasse 50% d'absences ?",
+   "expect_all": [
+    "rattrapage",
+    "DS"
+   ]
+  },
+  {
+   "id": 3,
+   "category": "onboarding",
+   "question": "Quelle est la note maximale au rattrapage ?",
+   "expect_all": [
+    "10/20"
+   ]
+  },
+  {
+   "id": 4,
+   "category": "onboarding",
+   "question": "Quels sont les horaires de l'administration ?",
+   "expect_all": [
+    "8h30",
+    "17h30"
+   ]
+  },
+  {
+   "id": 5,
+   "category": "onboarding",
+   "question": "Où demander une attestation de scolarité ?",
+   "expect_all": [
+    "Bureau de la Scolarité"
+   ]
+  },
+  {
+   "id": 6,
+   "category": "onboarding",
+   "question": "Qui enseigne Business English ?",
+   "expect_all": [
+    "Mansouri Zoulal"
+   ]
+  },
+  {
+   "id": 7,
+   "category": "onboarding",
+   "question": "Quels sont les modules du S2 ?",
+   "expect_all": [
+    "Droit commercial",
+    "Marketing fondamental"
+   ]
+  },
+  {
+   "id": 8,
+   "category": "onboarding",
+   "question": "Qui est le professeur de Institutions administratives ?",
+   "expect_all": [
+    "non indiqué"
+   ]
+  },
+  {
+   "id": 9,
+   "category": "onboarding",
+   "question": "Quel département contient MDO ?",
+   "expect_all": [
+    "INED"
+   ]
+  },
+  {
+   "id": 10,
+   "category": "onboarding",
+   "question": "Où voir l'emploi du temps ?",
+   "expect_all": [
+    "tableau d'affichage"
+   ]
+  },
+  {
+   "id": 11,
+   "category": "multilingue",
+   "question": "Where can I submit my medical certificate?",
+   "expect_all": [
+    "Mdarbi"
+   ]
+  },
+  {
+   "id": 12,
+   "category": "multilingue",
+   "question": "What happens if I exceed 50% absences?",
+   "expect_all": [
+    "rattrapage"
+   ]
+  },
+  {
+   "id": 13,
+   "category": "multilingue",
+   "question": "كيفاش نقدم الشهادة الطبية",
+   "expect_all": [
+    "Mdarbi"
+   ]
+  },
+  {
+   "id": 14,
+   "category": "multilingue",
+   "question": "ما هي ساعات عمل الإدارة؟",
+   "expect_all": [
+    "8h30"
+   ]
+  },
+  {
+   "id": 15,
+   "category": "multilingue",
+   "question": "فين كاينة المدرسة",
+   "expect_all": [
+    "El Jadida"
+   ]
+  },
+  {
+   "id": 16,
+   "category": "multilingue",
+   "question": "شنو هي النقطة القصوى فالاستدراك",
+   "expect_all": [
+    "10/20"
+   ]
+  },
+  {
+   "id": 17,
+   "category": "cours",
+   "question": "Qu'est-ce que la SARL ?",
+   "expect_all": [
+    "50 associés"
+   ]
+  },
+  {
+   "id": 18,
+   "category": "cours",
+   "question": "Quelle est la formule de la variance ?",
+   "expect_all": [
+    "σ"
+   ]
+  },
+  {
+   "id": 19,
+   "category": "cours",
+   "question": "Quelle est la période d'essai pour un cadre ?",
+   "expect_all": [
+    "3 mois"
+   ]
+  },
+  {
+   "id": 20,
+   "category": "cours",
+   "question": "Comment faire un amortissement dégressif ?",
+   "expect_all": [
+    "coefficient fiscal"
+   ]
+  },
+  {
+   "id": 21,
+   "category": "cours",
+   "question": "Quelle est la formule de la loi binomiale ?",
+   "expect_all": [
+    "np(1"
+   ]
+  },
+  {
+   "id": 22,
+   "category": "cours",
+   "question": "Quelles sont les étapes de l'entretien de vente ?",
+   "expect_all": [
+    "SONCAS"
+   ]
+  },
+  {
+   "id": 23,
+   "category": "cours",
+   "question": "What is the PODC process?",
+   "expect_all": [
+    "Planifier"
+   ]
+  },
+  {
+   "id": 24,
+   "category": "cours",
+   "question": "Quels sont les éléments constitutifs de l'État ?",
+   "expect_all": [
+    "Territoire",
+    "Population"
+   ]
+  },
+  {
+   "id": 25,
+   "category": "cours",
+   "question": "Quelle est la différence entre SA et SARL ?",
+   "expect_all": [
+    "300 000",
+    "50 associés"
+   ]
+  },
+  {
+   "id": 26,
+   "category": "cours",
+   "question": "Explique la partie double",
+   "expect_all": [
+    "Total Débit = Total Crédit"
+   ]
+  },
+  {
+   "id": 27,
+   "category": "cours",
+   "question": "Quelle est la formule du coût marginal ?",
+   "expect_all": [
+    "Cm(q)"
+   ]
+  },
+  {
+   "id": 28,
+   "category": "cours",
+   "question": "À quoi sert la matrice SWOT ?",
+   "expect_all": [
+    "Forces"
+   ]
+  },
+  {
+   "id": 29,
+   "category": "cours",
+   "question": "Qu'est-ce qu'une jointure SQL ?",
+   "expect_all": [
+    "JOIN"
+   ]
+  },
+  {
+   "id": 30,
+   "category": "cours",
+   "question": "Quelle est la durée légale du travail au Maroc ?",
+   "expect_all": [
+    "44 heures"
+   ]
+  },
+  {
+   "id": 31,
+   "category": "calcul",
+   "question": "Calcule la TVA à 20% sur 1000 DH HT",
+   "expect_all": [
+    "200,00",
+    "1 200,00"
+   ]
+  },
+  {
+   "id": 32,
+   "category": "calcul",
+   "question": "Un produit coûte 600 DH TTC avec une TVA de 20%, quel est le prix HT ?",
+   "expect_all": [
+    "500,00"
+   ]
+  },
+  {
+   "id": 33,
+   "category": "calcul",
+   "question": "Intérêts composés : capital 10000 DH, taux 5%, pendant 3 ans",
+   "expect_all": [
+    "11 576,25"
+   ]
+  },
+  {
+   "id": 34,
+   "category": "calcul",
+   "question": "Intérêts simples : 5000 DH à 6% pendant 9 mois",
+   "expect_all": [
+    "225,00"
+   ]
+  },
+  {
+   "id": 35,
+   "category": "calcul",
+   "question": "Escompte commercial d'un effet de 12000 DH à 8% pendant 45 jours",
+   "expect_all": [
+    "120,00"
+   ]
+  },
+  {
+   "id": 36,
+   "category": "suivi",
+   "question": "Et pour la SA ?",
+   "expect_all": [
+    "300 000"
+   ],
+   "history": [
+    {
+     "role": "user",
+     "content": "Qu'est-ce que la SARL ?"
+    },
+    {
+     "role": "assistant",
+     "content": "La SARL est une société..."
+    }
+   ]
+  },
+  {
+   "id": 37,
+   "category": "suivi",
+   "question": "Et l'écart-type ?",
+   "expect_all": [
+    "√V(X)"
+   ],
+   "history": [
+    {
+     "role": "user",
+     "content": "Quelle est la formule de la variance ?"
+    },
+    {
+     "role": "assistant",
+     "content": "V(X) = ..."
+    }
+   ]
+  },
+  {
+   "id": 38,
+   "category": "suivi",
+   "question": "Dans quel délai ?",
+   "expect_all": [
+    "72"
+   ],
+   "history": [
+    {
+     "role": "user",
+     "content": "Où déposer mon certificat médical ?"
+    },
+    {
+     "role": "assistant",
+     "content": "Chez le Chef de Département."
+    }
+   ]
+  },
+  {
+   "id": 39,
+   "category": "suivi",
+   "question": "Donne un exemple",
+   "expect_all": [
+    "SARL"
+   ],
+   "history": [
+    {
+     "role": "user",
+     "content": "Qu'est-ce que la SARL ?"
+    },
+    {
+     "role": "assistant",
+     "content": "Une SARL..."
+    }
+   ]
+  },
+  {
+   "id": 40,
+   "category": "question composée",
+   "question": "Qu'est-ce que la SARL et comment calculer la TVA ?",
+   "expect_all": [
+    "50 associés",
+    "TVA"
+   ]
+  },
+  {
+   "id": 41,
+   "category": "question composée",
+   "question": "Quelle est la règle pour les absences et les horaires de l'administration ?",
+   "expect_all": [
+    "50%",
+    "8h30"
+   ]
+  },
+  {
+   "id": 42,
+   "category": "sécurité/hors base",
+   "question": "Quel est le prix de l'inscription ?",
+   "expect_all": [
+    "aucun montant"
+   ]
+  },
+  {
+   "id": 43,
+   "category": "sécurité/hors base",
+   "question": "Combien coûte l'ESTC ?",
+   "expect_all": [
+    "aucun montant"
+   ]
+  },
+  {
+   "id": 44,
+   "category": "sécurité/hors base",
+   "question": "recette du couscous",
+   "expect_all": [
+    "contact@estc.ma"
+   ],
+   "expect_no_sources": true
+  },
+  {
+   "id": 45,
+   "category": "sécurité/hors base",
+   "question": "Quelle est la capitale de la France ?",
+   "expect_all": [
+    "contact@estc.ma"
+   ],
+   "expect_no_sources": true
+  },
+  {
+   "id": 46,
+   "category": "sécurité/hors base",
+   "question": "Qui est le président des États-Unis ?",
+   "expect_all": [
+    "contact@estc.ma"
+   ],
+   "expect_no_sources": true
+  }
+ ]
+}

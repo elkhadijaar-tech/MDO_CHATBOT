@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Assistant{% endblock %}
+{% block top %}
+<h1 class="page-title" id="chat-title">Assistant</h1>
+<div class="top-actions">
+  <label class="sr" for="mode">Source de connaissances</label>
+  <select id="mode" class="select" title="Source utilisée pour répondre">
+    <option value="auto">Auto (toutes les bases)</option>
+    <option value="cours">Cours (tuteur)</option>
+    <option value="admin">Administratif ESTC</option>
+  </select>
+  <label class="sr" for="lang">Langue de réponse</label>
+  <select id="lang" class="select" title="Langue de réponse">
+    <option value="auto">Langue : auto</option>
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+    <option value="ar">العربية</option>
+    <option value="darija">الدارجة</option>
+  </select>
+  <a class="btn btn-ghost" id="export-btn" href="/api/export" title="Exporter la conversation en Markdown"><svg class="ic"><use href="#i-download"/></svg><span class="hide-sm">Exporter</span></a>
+</div>
+{% endblock %}
+{% block content %}
+<section class="chat">
+  <div id="demo-banner" class="banner" hidden><strong>MODE DÉMO</strong> — aucune clé API : les réponses sont extraites de la base, sans IA. Renseignez <code>LLM_API_KEY</code> dans <code>.env</code> pour activer l'IA.</div>
+  <div id="messages" class="messages" aria-live="polite" tabindex="-1">
+    <div class="welcome" id="welcome">
+      <div class="welcome-logo"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M9 23V9l14 14V9" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+      <h2>Comment puis-je vous aider ?</h2>
+      <p>Je réponds à partir de la base officielle ESTC / MDO et du référentiel de cours. Français, English, العربية ou الدارجة.</p>
+      <div class="chips" id="chips">
+        <button type="button">Où déposer mon certificat médical ?</button>
+        <button type="button">Qu'est-ce que la SARL ?</button>
+        <button type="button">Calcule la TVA à 20 % sur 1 000 DH HT</button>
+        <button type="button">Quels sont les modules du S2 ?</button>
+        <button type="button">Quelle est la formule de la variance ?</button>
+        <button type="button">كيفاش نعرف جدول الحصص؟</button>
+      </div>
+    </div>
+  </div>
+  <div class="composer-wrap">
+    <form id="chat-form" class="composer" autocomplete="off">
+      <label class="sr" for="input">Votre question</label>
+      <textarea id="input" rows="1" maxlength="1000" placeholder="Posez votre question… (Entrée pour envoyer, Maj+Entrée pour un retour à la ligne)" required></textarea>
+      <button type="submit" id="send" class="btn btn-primary btn-send" aria-label="Envoyer"><svg class="ic"><use href="#i-send"/></svg></button>
+    </form>
+    <p class="composer-note">MDO CHATBOT peut se tromper : vérifiez les informations importantes auprès de l'administration (contact@estc.ma).</p>
+  </div>
+</section>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='md.js') }}"></script><script src="{{ url_for('static', filename='chat.js') }}"></script>{% endblock %}

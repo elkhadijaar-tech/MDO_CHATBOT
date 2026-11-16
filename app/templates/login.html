@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}Connexion administrateur{% endblock %}
+{% block top %}<h1 class="page-title">Administration</h1>{% endblock %}
+{% block content %}
+<div class="page narrow"><form class="card" method="post" action="{{ url_for('login') }}">
+  <h3 class="card-title">Connexion administrateur</h3>
+  {% if error %}<p class="err" role="alert">{{ error }}</p>{% endif %}
+  <label class="field"><span>Mot de passe</span><input class="input" type="password" name="password" required autofocus autocomplete="current-password"></label>
+  <button class="btn btn-primary" type="submit">Se connecter</button>
+</form></div>
+{% endblock %}

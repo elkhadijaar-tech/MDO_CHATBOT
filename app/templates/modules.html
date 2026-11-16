@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Modules et professeurs{% endblock %}
+{% block top %}<h1 class="page-title">Modules &amp; professeurs — filière MDO</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <div class="filters">
+    <div class="seg" id="sem-filter" role="group" aria-label="Filtrer par semestre">
+      <button type="button" data-s="" class="on">Tous</button><button type="button" data-s="1">S1</button><button type="button" data-s="2">S2</button><button type="button" data-s="3">S3</button><button type="button" data-s="4">S4</button>
+    </div>
+    <input id="mod-search" class="input" type="search" placeholder="Rechercher un module ou un professeur…" aria-label="Recherche">
+  </div>
+  <p class="note">Source : base officielle ESTC / MDO (v3). Les emplois du temps changent chaque année selon la décision de la Direction.</p>
+  <div id="mod-grid" class="grid"></div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='modules.js') }}"></script>{% endblock %}

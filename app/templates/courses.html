@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}Cours{% endblock %}
+{% block top %}<h1 class="page-title">Cours — référentiel pédagogique</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <p class="lead">19 modules d'économie, gestion, droit, comptabilité et informatique. Choisissez une action : l'assistant répond à partir du référentiel.</p>
+  <div id="ai-note" class="banner banner-inline" hidden>Résumés, QCM et plans de révision nécessitent le mode IA. En mode démo, l'assistant affiche les passages utiles du cours.</div>
+  <div class="filters"><input id="c-search" class="input" type="search" placeholder="Rechercher un module (ex. Droit, TVA, SQL)…" aria-label="Rechercher un module"></div>
+  <div id="course-grid" class="grid"></div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='courses.js') }}"></script>{% endblock %}

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block title %}Diagnostic{% endblock %}
+{% block top %}<h1 class="page-title">Diagnostic</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <div class="card">
+    <div class="row-between"><h3 class="card-title">Contrôles</h3><button id="llm-test" class="btn btn-primary" type="button">Tester la connexion IA</button></div>
+    <p class="note">Aucune clé n'est jamais affichée. Une connexion n'est déclarée « vérifiée » qu'après un test réel.</p>
+    <ul id="checks" class="checks"></ul>
+  </div>
+  <div class="card"><h3 class="card-title">Configuration</h3><dl id="cfg" class="dl"></dl></div>
+</div>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='diagnostics.js') }}"></script>{% endblock %}

@@ -1,0 +1,1 @@
+(function(){try{var t=localStorage.getItem('nexa-theme');if(!t&&window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)t='dark';if(t)document.documentElement.setAttribute('data-theme',t);if(localStorage.getItem('nexa-collapsed')==='1')document.documentElement.setAttribute('data-collapsed','1')}catch(e){}})();

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}Bases de connaissances{% endblock %}
+{% block top %}<h1 class="page-title">Bases de connaissances</h1>{% endblock %}
+{% block content %}
+<div class="page">
+  <section class="card">
+    <h3 class="card-title">Importer une source</h3>
+    <p class="note">Formats : PDF, DOCX, PPTX, XLSX, CSV, JSON, TXT, MD, SQLite (.sqlite / .db). Le fichier original est conservé ; les bases SQLite sont lues en lecture seule ; aucun SQL importé n'est exécuté. Le contenu importé est marqué « à vérifier ».</p>
+    <form id="import-form" class="import-form">
+      <label class="field"><span>Fichier</span><input id="f-file" class="input" type="file" required></label>
+      <label class="field"><span>Base de connaissances</span><input id="f-kb" class="input" list="kb-list" value="documents" required maxlength="40"><datalist id="kb-list"></datalist></label>
+      <label class="field"><span>Libellé (optionnel)</span><input id="f-label" class="input" maxlength="80" placeholder="Ex. Documents de cours S1"></label>
+      <button class="btn btn-primary" id="f-submit" type="submit"><svg class="ic"><use href="#i-upload"/></svg>Importer et indexer</button>
+    </form>
+  </section>
+  <h3 class="sec-title">Bases</h3>
+  <div id="kb-cards" class="grid g3"></div>
+  <h3 class="sec-title">Sources importées</h3>
+  <div class="card table-wrap"><table class="table" id="src-table"><thead><tr><th>Source</th><th>Base</th><th>Type</th><th>Passages</th><th>Doublons</th><th>Statut</th><th>Dernière mise à jour</th><th></th></tr></thead><tbody></tbody></table></div>
+</div>
+<dialog id="dlg" class="dlg"><div class="dlg-head"><h3 id="dlg-title"></h3><button class="btn-icon" id="dlg-close" type="button" aria-label="Fermer"><svg class="ic"><use href="#i-x"/></svg></button></div><div id="dlg-body" class="dlg-body"></div><div class="dlg-foot" id="dlg-foot"></div></dialog>
+{% endblock %}
+{% block scripts %}<script src="{{ url_for('static', filename='knowledge.js') }}"></script>{% endblock %}
